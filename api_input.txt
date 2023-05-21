@@ -1,4 +1,4 @@
-JSON POST
+JSON POST EVENT
 {
      "nama" : "pp",
     "kota" : "jember",
@@ -7,4 +7,13 @@ JSON POST
     "tanggal" : "2023-05-02",
     "waktu" : "12:20"
     
+}
+
+JSON POST users
+{
+    "username": "howhowhohw", //make sure not space
+    "password": "rijal",
+    "email": "rrizalkaa@gmail.com",
+    "namalengkap": "Rizal Khoirul Anam",
+    "kota": "Jember"
 }

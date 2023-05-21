@@ -41,6 +41,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TIME,
       },
+      eventimages: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE,

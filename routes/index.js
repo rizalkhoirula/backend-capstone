@@ -7,6 +7,10 @@ router.get('/', function(req, res, next) {
 });
 router.get('/event', (req, res, next) => {
   res.json ({
+}); 
+});
+router.get('/users', (req, res, next) => {
+  res.json ({
   });
 });
 module.exports = router;

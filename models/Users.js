@@ -1,16 +1,27 @@
 module.exports = (sequelize, DataTypes) => {
-  const event = sequelize.define(
-    "event",
+  const users = sequelize.define(
+    "users",
     {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
-        initialAutoIncrement: 879283,
       },
-
-      nama: {
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      namalengkap: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -18,41 +29,22 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      description: {
-        allowNull: false,
-        type: DataTypes.TEXT({ length: "long" }),
-      },
-      genre: {
-        allowNull: false,
-        type: DataTypes.ENUM(
-          "olahraga",
-          "kuliner",
-          "budaya",
-          "pameran",
-          "konser",
-          "other"
-        ),
-      },
-      tanggal: {
-        allowNull: false,
-        type: DataTypes.DATEONLY,
-      },
-      waktu: {
-        allowNull: false,
-        type: DataTypes.TIME,
+      foto: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
       createdAt: {
-        allowNull: true,
+        allowNull: false,
         type: DataTypes.DATE,
       },
       updatedAt: {
-        allowNull: true,
+        allowNull: false,
         type: DataTypes.DATE,
       },
     },
     {
-      tableName: "event",
+      tableName: "users",
     }
   );
-  return event;
+  return users;
 };
