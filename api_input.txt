@@ -1,0 +1,10 @@
+JSON POST
+{
+     "nama" : "pp",
+    "kota" : "jember",
+    "description" : "oakwoakwooawowokkaw",
+    "genre" : "olahraga",
+    "tanggal" : "2023-05-02",
+    "waktu" : "12:20"
+    
+}
