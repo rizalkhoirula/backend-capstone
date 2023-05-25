@@ -8,10 +8,10 @@ const v = new Validator();
 
 
 // API GET EVENT REQUEST
-// router.get('/', async (req, res) => {
-//     const events = await Event.findAll();
-//     return res.json(events);
-// });
+router.get('/', async (req, res) => {
+    const events = await Event();
+    return res.json(events);
+});
 
 // API GET BY ID REQUEST
 router.get('/:id', async (req, res) => {

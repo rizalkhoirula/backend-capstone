@@ -41,6 +41,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.TIME,
       },
+      eventimages: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
       createdAt: {
         allowNull: true,
         type: DataTypes.DATE,

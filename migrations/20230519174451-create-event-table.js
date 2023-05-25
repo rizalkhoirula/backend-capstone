@@ -42,7 +42,7 @@ module.exports = {
         type: Sequelize.TIME,
       },
       eventimages: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       createdAt: {
