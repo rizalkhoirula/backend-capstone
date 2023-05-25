@@ -36,7 +36,7 @@ const scheme =  {
   }
 
 const Event = await event.create(req.body); 
-
+// return res.json(Event);
 res.json({message: 'Add Event Succesfully'});
 });
 
