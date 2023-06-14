@@ -11,10 +11,10 @@ let processFileMiddleware = util.promisify(processFile);
 
 // Instantiate a storage client with credentials
 const storage = new Storage({
-  keyFilename: "routes/cloud-storage-handler/somethingnew.json",
+  keyFilename: "routes/cloud-storage-handler/somethingkey.json",
 });
 // ini diganti
-const bucket = storage.bucket("eventapp");
+const bucket = storage.bucket("capstone-eventapp");
 
 // Create a new handler for the upload route
 const uploadHandler = async (req, res) => {
@@ -28,7 +28,7 @@ const uploadHandler = async (req, res) => {
     // Create a new blob in the bucket and upload the file data.
     const blob = bucket.file(req.file.originalname);
     const blobStream = blob.createWriteStream();
-
+    
     blobStream.on("NotFoundError", (err) => {
       res.status(500).send({ message: err.message });
     });
@@ -56,8 +56,8 @@ const uploadHandler = async (req, res) => {
           url: publicUrl,
         });
       }
-
       res.status(200).send({
+        
         message: "File uploaded successfully",
         url: publicUrl,
       });
